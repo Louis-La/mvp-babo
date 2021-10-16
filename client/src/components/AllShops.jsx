@@ -24,7 +24,7 @@ class AllShops extends React.Component {
         <div className="card-body">
           <b><h4 className="card-title" id={item.store_id} onClick={this.changeStore}>{item.name}</h4></b>
           <hr></hr>
-          <p className="card-text">Rating: {item.rating}</p>
+          <p className="card-text">Rating: {item.rating}/10</p>
           {item.street} | {item.city}, {item.state}
           <p className="card-text"><small className="text-muted">Last updated today</small></p>
         </div>

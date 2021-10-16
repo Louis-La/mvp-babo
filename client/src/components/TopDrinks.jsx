@@ -49,13 +49,13 @@ class TopDrinks extends React.Component {
       }
       if (topFlavors[item.drink_id]) {
         return (
-          <div className="card d-flex align-items-center" style={{width: "27em"}}>
+          <div className="card d-flex align-items-center topDrinkCard" style={{width: "27em"}}>
             <div className="card-body">
-              <p className="card-text"><b>{stores[item.store_id]}</b></p>
+              <p className="card-text topDrinkCardName"><b>{item.drink_name}</b></p>
             </div>
             <img src={item.drink_photo} class="card-img-top topDrinkPhoto" alt="drinkphoto"/>
             <div className="card-body">
-              <div className="card-text">{item.drink_name} | <b>Rating: {topFlavors[item.drink_id]}</b></div>
+              <div className="card-text">{stores[item.store_id]} | <b>Rating: {topFlavors[item.drink_id]}/10</b></div>
             </div>
           </div>
         )

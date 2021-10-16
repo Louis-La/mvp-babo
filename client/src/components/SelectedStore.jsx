@@ -43,7 +43,7 @@ class SelectedStore extends React.Component {
     let mappedComments = this.props.currentDrinkReviews.map((item, index) => (
       <div key={index}>
         <b>Name: {item.username}</b>
-        <p>{item.comment}</p> Rating: {item.rating}
+        <p>{item.comment}</p> Rating: {item.rating}/10
         <hr></hr>
       </div>
     ))
@@ -102,7 +102,7 @@ class SelectedStore extends React.Component {
 
       return (
         <div className="col" key={index}>
-          <div className="card">
+          <div className="card eachDrinkCards">
             <img src={item.drink_photo} className="eachDrinkPhoto card-img-top" alt={item.drink_id} id="myModal" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={this.openModal.bind(this)}/>
             <div className="card-body">
               <h5 className="card-title">{item.drink_name}</h5>
@@ -112,9 +112,13 @@ class SelectedStore extends React.Component {
         </div>
       )
     })
+    let indexPhoto = this.props.allShops[this.props.selectedStore - 1]
+    let currentMainStorePhoto = indexPhoto.logo_photo;
 
     return (
+
       <div className="row row-cols-1 row-cols-md-3 g-4">
+          <img className="selectedStoreLogo" src={currentMainStorePhoto}></img>
 
         {mappedArray}
 
@@ -128,6 +132,8 @@ class SelectedStore extends React.Component {
 
 
       </div>
+
+
     );
   };
 }

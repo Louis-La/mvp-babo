@@ -42,7 +42,7 @@ class App extends React.Component {
       url: '/shops',
     })
       .then((response) => {
-        // console.log(response.data);
+        console.log(response.data);
         this.setState({
           allShops: response.data,
         }, () => {
@@ -175,7 +175,7 @@ class App extends React.Component {
       homepage =
         <div className="container">
           <div className="row">
-            <SelectedStore submitComment={this.submitComment} currentDrinkId={this.state.currentDrinkId} currentDrinkName={this.state.currentDrinkName} currentDrinkPhoto={this.state.currentDrinkPhoto} currentDrinkRating={this.state.currentDrinkRating} currentDrinkReviews={this.state.currentDrinkReviews} currentDrinkPrice={this.state.currentDrinkPrice} allComments={this.state.allComments} allDrinks={this.state.allDrinks} selectedStore={this.state.selectedStore} changeCurrentModal={this.changeCurrentModal.bind(this)}/>
+            <SelectedStore allShops={this.state.allShops} submitComment={this.submitComment} currentDrinkId={this.state.currentDrinkId} currentDrinkName={this.state.currentDrinkName} currentDrinkPhoto={this.state.currentDrinkPhoto} currentDrinkRating={this.state.currentDrinkRating} currentDrinkReviews={this.state.currentDrinkReviews} currentDrinkPrice={this.state.currentDrinkPrice} allComments={this.state.allComments} allDrinks={this.state.allDrinks} selectedStore={this.state.selectedStore} changeCurrentModal={this.changeCurrentModal.bind(this)}/>
           </div>
         </div>
     }

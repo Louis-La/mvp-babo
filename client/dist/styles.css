@@ -90,3 +90,25 @@
   transform: scale(1.1);
 
 }
+
+.topDrinkCard {
+  background: rgb(9,36,0);
+  background: linear-gradient(183deg, rgb(168, 215, 152) 0%, rgba(9,121,29,1) 0%, rgba(238,246,247,1) 53%);
+box-shadow: 0 1px 6px 0 rgb(34 34 34 / 62%);
+}
+
+.topDrinkCardName {
+  font-size: 1.3em;
+  color: white;
+  margin: 0em;
+}
+
+.eachDrinkCards {
+  background: linear-gradient(180deg, rgb(176, 197, 170) 0%, rgb(188, 236, 198) 0%, rgba(238,246,247,1) 27%);
+}
+
+.selectedStoreLogo {
+  margin-top: 5.5em;
+  height: 10em;
+  object-fit: contain;
+}
