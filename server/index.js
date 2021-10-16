@@ -33,6 +33,13 @@ app.get('/comments', (req, res) => {
   })
 });
 
+app.post('/submitComment', (req, res) => {
+  db.insertComment(req.body, (result) => {
+    // console.log(result);
+    res.send(result)
+  })
+});
+
 app.listen(port, () => {
   console.log(`babo app listening at http://localhost:${port}`)
 })

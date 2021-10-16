@@ -20,18 +20,21 @@ class AllShops extends React.Component {
 
     const mappedArray = this.props.allShops.map((item, index) => (
       <div className="card mb-3" key={index}>
-        <img src={item.logo_photo} className="card-img-top" alt="logophoto" id={item.store_id} onClick={this.changeStore}/>
+        <img src={item.logo_photo} className="card-img-top shopPhoto" alt="logophoto" id={item.store_id} onClick={this.changeStore}/>
         <div className="card-body">
-          <h5 className="card-title" id={item.store_id} onClick={this.changeStore}>{item.name}</h5>
+          <b><h4 className="card-title" id={item.store_id} onClick={this.changeStore}>{item.name}</h4></b>
+          <hr></hr>
           <p className="card-text">Rating: {item.rating}</p>
-          <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+          {item.street} | {item.city}, {item.state}
+          <p className="card-text"><small className="text-muted">Last updated today</small></p>
         </div>
       </div>
     ))
 
     return (
       <div className="col-7 allShops">
-        <h1>Showing all the shops names</h1>
+        <h2 className="topHeadings">Results for Los Angeles, 95020</h2>
+        <br></br>
 
         {mappedArray}
 

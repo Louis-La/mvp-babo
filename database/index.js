@@ -40,8 +40,29 @@ const getComments = (callback) => {
   })
 };
 
+const insertComment = (object, callback) => {
+  const insertString = `
+    INSERT
+      INTO comments
+        (
+          drink_id,
+          username,
+          comment,
+          drink_rating
+        )
+    VALUES
+      (
+        ${object.id},
+        '${object.name}',
+        '${object.comment}',
+        ${parseInt(object.rating)}
+      )`;
+  connection.query(insertString, callback);
+}
+
 module.exports = {
   getShops,
   getDrinks,
-  getComments
+  getComments,
+  insertComment
 }

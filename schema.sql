@@ -42,6 +42,7 @@ IGNORE 1 ROWS;
 CREATE TABLE comments (
   comment_id INTEGER  NOT NULL AUTO_INCREMENT,
   drink_id INTEGER,
+  username TEXT,
   comment TEXT,
   drink_rating INTEGER,
   PRIMARY KEY (comment_id),
@@ -63,3 +64,6 @@ CREATE TABLE newsletter (
   email TEXT,
   PRIMARY KEY (newsletter_id)
 );
+
+    INSERT INTO comments (drink_id, username, comment, drink_rating)
+      VALUES (1, "Jane P.", "It was okay", 7);

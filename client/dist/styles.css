@@ -1,5 +1,22 @@
 .mainLogo {
   height: 8em;
+  cursor: pointer;
+}
+.mainLogo:hover {
+  opacity: 90%;
+  /* transform: scale(1.01); */
+}
+
+.topHeadings {
+  color: grey;
+}
+
+.bannerPhoto1 {
+  height: 8em;
+  width: 46em;
+  object-fit: cover;
+  border-radius: .3em;
+  box-shadow: 0 1px 6px 0 rgb(34 34 34 / 50%);
 }
 
 .logoNameCard {
@@ -14,9 +31,62 @@
   /* border: .2em solid; */
 }
 
+.topDrinkPhoto {
+  height: 11.4em;
+  object-fit: cover;
+  box-shadow: 0 1px 6px 0 rgb(34 34 34 / 20%);
+}
+
+.shopPhoto {
+  height: 12em;
+  object-fit: contain;
+  cursor: pointer;
+}
+
 .allShops {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* border: .2em solid; */
+}
+
+.modalDrinkPhoto {
+  width: 29em;
+  height: 20em;
+  object-fit: contain;
+
+
+}
+
+/* CSS for Selected Store Component*/
+
+.eachDrinkPhoto {
+  height: 10em;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Modals */
+
+/* Override */
+
+.navbar {
+  border-radius: .4em;
+  box-shadow: 0 1px 6px 0 rgb(34 34 34 / 50%);
+}
+
+.input-group {
+  box-shadow: 0 1px 6px 0 rgb(34 34 34 / 20%);
+}
+
+.card {
+  margin: .3em;
+  color: rgb(72, 65, 65);
+  box-shadow: 0 1px 6px 0 rgb(34 34 34 / 15%);
+}
+
+.input-group-text {
+  cursor: pointer;
+  transform: scale(1.1);
+
 }
