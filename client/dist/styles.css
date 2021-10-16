@@ -1,0 +1,22 @@
+.mainLogo {
+  height: 8em;
+}
+
+.logoNameCard {
+  height: 10em;
+  object-fit: cover;
+}
+
+.topDrinks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: .2em solid; */
+}
+
+.allShops {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: .2em solid; */
+}
