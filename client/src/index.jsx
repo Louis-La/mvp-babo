@@ -17,8 +17,8 @@ class App extends React.Component {
       homepage: true,
       selectedStore: 1,
       currentDrinkId: 1,
-      currentDrinkName: "Black Milk Tea",
-      currentDrinkPhoto: "",
+      currentDrinkName: 'Black Milk Tea',
+      currentDrinkPhoto: '',
       currentDrinkRating: 3,
       currentDrinkReviews: [],
       currentDrinkPrice: 4,
@@ -42,17 +42,17 @@ class App extends React.Component {
       url: '/shops',
     })
       .then((response) => {
-        console.log(response.data);
+        // console.log(response.data);
         this.setState({
           allShops: response.data,
         }, () => {
-          console.log(this.state.allShops)
-        })
+          // console.log(this.state.allShops)
+        });
       })
       .catch((error) => {
         console.log('Error during getAllStores', error);
       });
-  }
+  };
 
   getAllDrinks() {
     axios({
@@ -64,7 +64,7 @@ class App extends React.Component {
         this.setState({
           allDrinks: response.data
         }, () => {
-          console.log(this.state.allDrinks)
+          // console.log(this.state.allDrinks)
         })
       })
       .catch((error) => {
@@ -82,7 +82,7 @@ class App extends React.Component {
         this.setState({
           allComments: response.data
         }, () => {
-          console.log(this.state.allComments)
+          // console.log(this.state.allComments)
         })
       })
       .catch((error) => {
@@ -98,7 +98,7 @@ class App extends React.Component {
     })
       .then((response) => {
         // console.log(response.data);
-        console.log(response)
+        // console.log(response)
         document.getElementById('insertedPersonName').value = "";
         document.getElementById('insertedCommenter').value = "";
         this.getAllComments();
@@ -124,8 +124,6 @@ class App extends React.Component {
 
   changeCurrentModal(drinkId) {
 
-
-
     const changeStateDrinks = (name, price, photo) => {
       let ratingTotal = 0;
       let commentCount = 0;
@@ -147,7 +145,7 @@ class App extends React.Component {
         currentDrinkRating: (ratingTotal / commentCount).toFixed(1),
         currentDrinkReviews: comments,
       }, () => {
-        console.log('this is all comments', comments)
+        // console.log('this is all comments', comments)
       })
 
     }
@@ -183,62 +181,55 @@ class App extends React.Component {
 
     return (
       <div>
+
         <LogoBar />
         <br></br>
         <div className="container">
           <div className="row">
             <div className="col-4">
-
             <img className="mainLogo" src="https://i.imgur.com/CXf8J6e.png" onClick={this.goBackToHomepage}/>
-
             </div>
             <div className="col-8">
               <img className="bannerPhoto1" src="/logos/matcha.png"></img>
             </div>
-
-
           </div>
-
         </div>
         <br></br>
 
-
         <div className="container">
-          <div class="input-group mb-3">
-  <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="boba store name, jasmine milk tea, zip code..."></input>
-  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Search by</button>
-  <ul class="dropdown-menu dropdown-menu-end">
-    <li><a class="dropdown-item" href="#">Store</a></li>
-    <li><a class="dropdown-item" href="#">Drink Name</a></li>
-    <li><a class="dropdown-item" href="#">Location (Zip Code)</a></li>
-    <li><hr class="dropdown-divider"/></li>
-    <li><a class="dropdown-item" href="#">Advanced Search</a></li>
-  </ul>
-</div>
+          <div className="input-group mb-3">
+            <input type="text" className="form-control" aria-label="Text input with dropdown button" placeholder="boba store name, jasmine milk tea, zip code..."></input>
+            <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Search by</button>
+            <ul className="dropdown-menu dropdown-menu-end">
+              <li><a className="dropdown-item" href="#">Store</a></li>
+              <li><a className="dropdown-item" href="#">Drink Name</a></li>
+              <li><a className="dropdown-item" href="#">Location (Zip Code)</a></li>
+              <li><hr className="dropdown-divider"/></li>
+              <li><a className="dropdown-item" href="#">Advanced Search</a></li>
+            </ul>
+          </div>
         </div>
 
-
-
         {homepage}
-        {/* <SignupEmail/> */}
-<br></br>
-<div className="container">
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Subscribe to our newsletter with your email" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-  <span class="input-group-text" id="basic-addon2">Subscribe</span>
-</div><br></br>
-        <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">About</li>
-    <li class="breadcrumb-item active" aria-current="page">Careers</li>
-    <li class="breadcrumb-item active" aria-current="page">Press</li>
-    <li class="breadcrumb-item active" aria-current="page">Investor Relations</li>
-    <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
-  </ol>
-</nav>
 
-</div>
+        <br></br>
+        <div className="container">
+          <div className="input-group mb-3">
+            <input type="text" className="form-control" placeholder="Subscribe to our newsletter with your email" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+            <span className="input-group-text" id="basic-addon2">Subscribe</span>
+          </div>
+          <br></br>
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item"><a href="#">Home</a></li>
+              <li className="breadcrumb-item active" aria-current="page">About</li>
+              <li className="breadcrumb-item active" aria-current="page">Careers</li>
+              <li className="breadcrumb-item active" aria-current="page">Press</li>
+              <li className="breadcrumb-item active" aria-current="page">Investor Relations</li>
+              <li className="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+            </ol>
+          </nav>
+        </div>
 
       </div>
     )

@@ -26,7 +26,7 @@ class SelectedStore extends React.Component {
     const comment = document.getElementById('insertedCommenter').value;
     const rating = document.getElementById('selectedRating').options[document.getElementById('selectedRating').selectedIndex].text;
     console.log(name, comment, rating, this.props.currentDrinkId)
-    this.props.submitComment({name: name, comment: comment, rating: rating, id: this.props.currentDrinkId});
+    this.props.submitComment({ name: name, comment: comment, rating: rating, id: this.props.currentDrinkId });
   }
 
   render() {
@@ -62,23 +62,23 @@ class SelectedStore extends React.Component {
           {mappedComments}
           <p><b>Rate the Drink:</b></p>
 
-            <label>Name: </label><input id="insertedPersonName" type="text"></input><br></br><br></br>
-            <label>Comment: </label><input id="insertedCommenter" type="text"></input><br></br><br></br>
-            <label>Rate it (0 - 10):</label>
-            <select id="selectedRating">
-              <option value='0'>0</option>
-              <option value='1'>1</option>
-              <option value='2'>2</option>
-              <option value='3'>3</option>
-              <option value='4'>4</option>
-              <option value='5'>5</option>
-              <option value='6'>6</option>
-              <option value='7'>7</option>
-              <option value='8'>8</option>
-              <option value='9'>9</option>
-              <option value='10'>10</option>
-            </select>
-            <button onClick={this.submitInfo.bind(this)}>Submit</button>
+          <label>Name: </label><input id="insertedPersonName" type="text"></input><br></br><br></br>
+          <label>Comment: </label><input id="insertedCommenter" type="text"></input><br></br><br></br>
+          <label>Rate it (0 - 10):</label>
+          <select id="selectedRating">
+            <option value='0'>0</option>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+          </select>
+          <button onClick={this.submitInfo.bind(this)}>Submit</button>
 
         </div>
         <div className="modal-footer">
@@ -103,7 +103,7 @@ class SelectedStore extends React.Component {
       return (
         <div className="col" key={index}>
           <div className="card eachDrinkCards">
-            <img src={item.drink_photo} className="eachDrinkPhoto card-img-top" alt={item.drink_id} id="myModal" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={this.openModal.bind(this)}/>
+            <img src={item.drink_photo} className="eachDrinkPhoto card-img-top" alt={item.drink_id} id="myModal" data-bs-toggle="modal" data-bs-target="#exampleModal" onClick={this.openModal.bind(this)} />
             <div className="card-body">
               <h5 className="card-title">{item.drink_name}</h5>
               <div className="card-text">${item.price} <hr></hr>Average Rating: {(ratingTotal / commentCount).toFixed(1)}/10</div>
@@ -118,7 +118,7 @@ class SelectedStore extends React.Component {
     return (
 
       <div className="row row-cols-1 row-cols-md-3 g-4">
-          <img className="selectedStoreLogo" src={currentMainStorePhoto}></img>
+        <img className="selectedStoreLogo" src={currentMainStorePhoto}></img>
 
         {mappedArray}
 
@@ -129,11 +129,7 @@ class SelectedStore extends React.Component {
           </div>
         </div>
 
-
-
       </div>
-
-
     );
   };
 }

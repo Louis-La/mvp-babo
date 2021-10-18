@@ -27,7 +27,7 @@ class TopDrinks extends React.Component {
     let currentId = 1;
     for (let key in ratings) {
       let average = ratings[key] / ratingsCount[key]
-      averageRatings.push({rating: average, id: currentId});
+      averageRatings.push({ rating: average, id: currentId });
       currentId++;
     }
 
@@ -37,7 +37,7 @@ class TopDrinks extends React.Component {
         topFlavors[averageRatings[m].id] = averageRatings[m].rating.toFixed(1);
       }
     }
-    console.log(topFlavors)
+    // console.log(topFlavors)
 
     let mappedTopDrinks = this.props.allDrinks.map((item, index) => {
       let stores = {
@@ -49,11 +49,11 @@ class TopDrinks extends React.Component {
       }
       if (topFlavors[item.drink_id]) {
         return (
-          <div className="card d-flex align-items-center topDrinkCard" style={{width: "27em"}}>
+          <div key={index} className="card d-flex align-items-center topDrinkCard" style={{ width: "27em" }}>
             <div className="card-body">
               <p className="card-text topDrinkCardName"><b>{item.drink_name}</b></p>
             </div>
-            <img src={item.drink_photo} class="card-img-top topDrinkPhoto" alt="drinkphoto"/>
+            <img src={item.drink_photo} className="card-img-top topDrinkPhoto" alt="drinkphoto" />
             <div className="card-body">
               <div className="card-text">{stores[item.store_id]} | <b>Rating: {topFlavors[item.drink_id]}/10</b></div>
             </div>
