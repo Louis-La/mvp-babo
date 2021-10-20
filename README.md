@@ -82,3 +82,4 @@ Some potential and upcoming features include:
 * Feature that allows existing or future boba stores to apply to have their store featured on the front
 * Image carousel banner with new drinks/updates
 * Mobile friendly application
+* Icons for social media
