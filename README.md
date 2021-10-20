@@ -3,6 +3,7 @@
 **Application Demo Video (2 mins)**
 
 [![gif video](https://media4.giphy.com/media/gV1hUZqd9zdeOpCFCH/giphy.gif)](https://www.youtube.com/watch?v=iqsAlkkk-k4)
+[Demo YouTube Video Link](https://www.youtube.com/watch?v=iqsAlkkk-k4)
 
 ---
 
@@ -13,6 +14,8 @@
 
 **Overview**
 
+![homepage](https://github.com/Louis-La/mvp-babo/blob/main/babo-homepage.png)
+
 This minimum viable project is called "babo" and it is a web application allows the users to view nearby boba shops. In addition, users can view a full list of drinks available in each shop, as well as the price and individual reviews/ratings of them. This aids the users in making their decision on which drink to get, based on reviews and the overall ratings.
 
 ---
@@ -21,11 +24,15 @@ This minimum viable project is called "babo" and it is a web application allows 
 
 *Components*
 
+![store](https://github.com/Louis-La/mvp-babo/blob/main/store-page.png)
+
 * All Stores Nearby
 
 This application has three main components to it. The first is the list of all the nearby boba shops within a zip code radius. Currently, the application is pull its data from a set of mock dataset with fake shop names/brands. Each "card" shows the brand's logo, the overall store rating, address, and the last time the drink list data has been updated. Upon clicking on the name or the logo, the component re-renders and shows the user a list/images of all the drinks in the selected store.
 
 * Drink List Of a Selected Store
+
+![rating](https://github.com/Louis-La/mvp-babo/blob/main/drink-ratings.png)
 
 The second component has a separate card for each drink. And each drink has their name, average rating, and price. Clicking a drink will open up a modal showing all the reviews by customers. The reviews includes the commenter's name, comment, and a rating from 0 - 10. All these ratings are averaged and used to determine the rating of drink. This modal also allows the user to write their own review if the user is logged in (login feature/function is in progress).
 
