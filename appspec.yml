@@ -6,7 +6,7 @@ files:
 
 – source: .
 
-destination: /home/ubuntu/blog_app
+destination: /home/ubuntu/mvp-babo
 
 hooks:
 
