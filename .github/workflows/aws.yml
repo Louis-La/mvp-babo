@@ -44,9 +44,9 @@ run: |
 
 aws deploy create-deployment \
 
-–application-name nodeblog_application \
+–application-name babo_application \
 
-–deployment-group-name nodeblog_deployment \
+–deployment-group-name babo_application \
 
 –deployment-config-name CodeDeployDefault.OneAtATime \
 
