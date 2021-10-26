@@ -1,10 +1,6 @@
 name: Automate Deploy to Amazon EC2 using Github actions
 
-on:
-
-push:
-
-branches: [ main ]
+on: push
 
 jobs:
 
