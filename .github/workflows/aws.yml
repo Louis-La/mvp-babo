@@ -44,7 +44,7 @@ run: |
 
 aws deploy create-deployment \
 
-–application-name babo_application \
+application-name babo_application \
 
 –deployment-group-name babo_application \
 
